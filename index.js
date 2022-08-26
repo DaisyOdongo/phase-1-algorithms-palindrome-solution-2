@@ -1,5 +1,17 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+  for (let startIndex = 0; startIndex < word.length / 2; startIndex++) {
+    for (let i = 0; i < word.length / 2; i++) {
+      const endIndex = word.length - 1 - startIndex;
+      if (word[startIndex] !== word[endIndex]) {
+      const j = word.length - 1 - i;
+      if (word[startIndex] !== word[j]) 
+       // if the letters don't match, return false
+      return false;
+      }
+      }
+    }
+   // if we reach the middle, and all the letters match, return true
+   return true;
 }
 
 /* 
